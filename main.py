@@ -29,11 +29,11 @@ def input_value(x):
 
     global values
     values = values + str(x)
-    result =eval('2 +2')
+
     text_value.set(values)
 
 text_value = StringVar()
-app_label = Label(frame_screen, textvariable=text_value, width=8, height=2, font=font3, padx=5, anchor="e", justify=RIGHT, bg=color1)
+app_label = Label(frame_screen, textvariable=text_value, width=8, height=1, font=font3, padx=2, anchor="e", justify=RIGHT, bg=color1)
 app_label.place(x=100, y=0)
 
 b_1 = Button(frame_body, text="Clean", width=8, height=1, fg=color6, bg=color3, font=font1)
@@ -51,41 +51,42 @@ b_3 = Button(frame_body,
              width=3,
              height=2,
              bg=color5,
-             font=font2)
+             font=font2,
+             command=lambda: input_value('/'))
 b_3.place(x=185, y=4.9)
 
-b_4 = Button(frame_body, text="7", width=3, height=2, bg=color4, font=font2)
+b_4 = Button(frame_body, text="7", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('7'))
 b_4.place(x=10, y=50)
-b_5 = Button(frame_body, text="8", width=3, height=2, bg=color4, font=font2)
+b_5 = Button(frame_body, text="8", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('8'))
 b_5.place(x=67, y=50)
-b_6 = Button(frame_body, text="9", width=3, height=2, bg=color4, font=font2)
+b_6 = Button(frame_body, text="9", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('9'))
 b_6.place(x=125, y=50)
-b_7 = Button(frame_body, text="*", width=3, height=2, bg=color5, font=font2)
+b_7 = Button(frame_body, text="*", width=3, height=2, bg=color5, font=font2, command=lambda: input_value('*'))
 b_7.place(x=185, y=50)
 
-b_8 = Button(frame_body, text="4", width=3, height=2, bg=color4, font=font2)
+b_8 = Button(frame_body, text="4", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('4'))
 b_8.place(x=10, y=100)
-b_9 = Button(frame_body, text="5", width=3, height=2, bg=color4, font=font2)
+b_9 = Button(frame_body, text="5", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('5'))
 b_9.place(x=67, y=100)
-b_10 = Button(frame_body, text="6", width=3, height=2, bg=color4, font=font2)
+b_10 = Button(frame_body, text="6", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('6'))
 b_10.place(x=125, y=100)
-b_11 = Button(frame_body, text="-", width=3, height=2, bg=color5, font=font2)
+b_11 = Button(frame_body, text="-", width=3, height=2, bg=color5, font=font2, command=lambda: input_value('-'))
 b_11.place(x=185, y=100)
 
-b_12 = Button(frame_body, text="1", width=3, height=2, bg=color4, font=font2)
+b_12 = Button(frame_body, text="1", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('1'))
 b_12.place(x=10, y=150)
-b_13 = Button(frame_body, text="2", width=3, height=2, bg=color4, font=font2)
+b_13 = Button(frame_body, text="2", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('2'))
 b_13.place(x=67, y=150)
-b_14 = Button(frame_body, text="3", width=3, height=2, bg=color4, font=font2)
+b_14 = Button(frame_body, text="3", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('3'))
 b_14.place(x=125, y=150)
-b_15 = Button(frame_body, text="+", width=3, height=2, bg=color5, font=font2)
+b_15 = Button(frame_body, text="+", width=3, height=2, bg=color5, font=font2, command=lambda: input_value('+'))
 b_15.place(x=185, y=150)
 
-b_16 = Button(frame_body, text="0", width=10, height=2, bg=color4, font=font2)
+b_16 = Button(frame_body, text="0", width=10, height=2, bg=color4, font=font2, command=lambda: input_value('0'))
 b_16.place(x=10, y=200)
-b_17 = Button(frame_body, text=".", width=3, height=2, bg=color4, font=font2)
+b_17 = Button(frame_body, text=".", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('.'))
 b_17.place(x=125, y=200)
-b_18 = Button(frame_body, text="=", width=3, height=2, bg=color5, font=font2)
+b_18 = Button(frame_body, text="=", width=3, height=2, bg=color5, font=font2, command=lambda: input_value('='))
 b_18.place(x=185, y=200)
 
 
