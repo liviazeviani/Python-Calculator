@@ -29,8 +29,11 @@ def input_value(x):
 
     global values
     values = values + str(x)
-
     text_value.set(values)
+
+def calculate():
+    result =eval(values)
+    print(result)
 
 text_value = StringVar()
 app_label = Label(frame_screen, textvariable=text_value, width=8, height=1, font=font3, padx=2, anchor="e", justify=RIGHT, bg=color1)
@@ -86,7 +89,7 @@ b_16 = Button(frame_body, text="0", width=10, height=2, bg=color4, font=font2, c
 b_16.place(x=10, y=200)
 b_17 = Button(frame_body, text=".", width=3, height=2, bg=color4, font=font2, command=lambda: input_value('.'))
 b_17.place(x=125, y=200)
-b_18 = Button(frame_body, text="=", width=3, height=2, bg=color5, font=font2, command=lambda: input_value('='))
+b_18 = Button(frame_body, text="=", width=3, height=2, bg=color5, font=font2, command=calculate())
 b_18.place(x=185, y=200)
 
 
