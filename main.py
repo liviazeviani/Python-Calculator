@@ -28,7 +28,7 @@ values = ''
 def input_value(x):
 
     global values
-
+    values = values + str(x)
     result =eval('2 +2')
     text_value.set(values)
 
