@@ -9,19 +9,23 @@ color4 ="#dae0db"
 color5 ="#ebaf6e"
 color6 ="#f0e6dd"
 
-font1= 'Ivy 10 bold'
-font2= 'Ivy 8 bold'
+font1 = 'Ivy 10 bold'
+font2 = 'Ivy 8 bold'
+font3 = 'Ivy 18'
 
 window =Tk()
 window.title("Calculator")
-window.geometry("250x320")
+window.geometry("250x300")
 window.config(bg=color1)
 
 frame_screen = Frame(window, width=230, height=50, bg=color1)
-frame_screen.grid(row=0, column=0)
+frame_screen.grid(row=0, column=0, pady=4)
 
 frame_body = Frame(window, width=250, height=270, bg=color2)
 frame_body.grid(row=1, column=0)
+
+app_label = Label(frame_screen, text='123', width=8, height=2, font=font3, padx=5, anchor="e", justify=RIGHT, bg=color1)
+app_label.place(x=100, y=0)
 
 b_1 = Button(frame_body, text="Clean", width=8, height=1, fg=color6, bg=color3, font=font1)
 b_1.place(x=10, y=8.5)
