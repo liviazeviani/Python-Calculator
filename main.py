@@ -23,9 +23,11 @@ frame_screen.grid(row=0, column=0, pady=4)
 
 frame_body = Frame(window, width=250, height=270, bg=color2)
 frame_body.grid(row=1, column=0)
-def calculate():
+def input_value(x):
+
+    values = x
     result =eval('2+2')
-    text_value.set(result)
+    text_value.set(values)
 
 text_value = StringVar()
 app_label = Label(frame_screen, textvariable=text_value, width=8, height=2, font=font3, padx=5, anchor="e", justify=RIGHT, bg=color1)
@@ -33,9 +35,20 @@ app_label.place(x=100, y=0)
 
 b_1 = Button(frame_body, text="Clean", width=8, height=1, fg=color6, bg=color3, font=font1)
 b_1.place(x=10, y=8.5)
-b_2 = Button(frame_body, text="%", width=3, height=2, bg=color4, font=font2)
+b_2 = Button(frame_body,
+             text="%",
+             width=3,
+             height=2,
+             bg=color4,
+             font=font2,
+             command=lambda: input_value('%'))
 b_2.place(x=125, y=4.9)
-b_3 = Button(frame_body, text="/", width=3, height=2, bg=color5, font=font2)
+b_3 = Button(frame_body,
+             text="/",
+             width=3,
+             height=2,
+             bg=color5,
+             font=font2)
 b_3.place(x=185, y=4.9)
 
 b_4 = Button(frame_body, text="7", width=3, height=2, bg=color4, font=font2)
@@ -72,7 +85,7 @@ b_17.place(x=125, y=200)
 b_18 = Button(frame_body, text="=", width=3, height=2, bg=color5, font=font2)
 b_18.place(x=185, y=200)
 
-calculate()
+
 window.mainloop()
 
 
