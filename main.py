@@ -32,10 +32,14 @@ def input_value(x):
     text_value.set(values)
 
 def calculate():
+    global values
     result =eval(values)
-    print(result)
+
+    text_value.set(str(result))
+
 
 def clean():
+    global values
     values =''
     text_value.set('')
 
