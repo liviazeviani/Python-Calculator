@@ -35,15 +35,15 @@ def calculate():
     result =eval(values)
     print(result)
 
-def clean_the_screen():
-    values = ''
-    values.set('')
+def clean():
+    values =''
+    text_value.set('')
 
 text_value = StringVar()
 app_label = Label(frame_screen, textvariable=text_value, width=8, height=1, font=font3, padx=2, anchor="e", justify=RIGHT, bg=color1)
 app_label.place(x=100, y=0)
 
-b_1 = Button(frame_body, command=clean_the_screen, text="Clean", width=8, height=1, fg=color6, bg=color3, font=font1)
+b_1 = Button(frame_body, command=clean, text="Clean", width=8, height=1, fg=color6, bg=color3, font=font1)
 b_1.place(x=10, y=8.5)
 b_2 = Button(frame_body,
              text="%",
