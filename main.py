@@ -23,10 +23,13 @@ frame_screen.grid(row=0, column=0, pady=4)
 
 frame_body = Frame(window, width=250, height=270, bg=color2)
 frame_body.grid(row=1, column=0)
+
+values = ''
 def input_value(x):
 
-    values = x
-    result =eval('2+2')
+    global values
+
+    result =eval('2 +2')
     text_value.set(values)
 
 text_value = StringVar()
